@@ -1,0 +1,17 @@
+Employee Security Awareness Guide
+
+Phishing Awareness:
+Never click links in unexpected emails. Verify sender identity before
+opening attachments. Report suspicious emails to it-security@acme.example.
+
+Data Handling:
+Customer data must never leave approved systems. Encryption is required
+for all data at rest and in transit. Personal devices may not store company data.
+
+Physical Security:
+Always lock your screen when leaving your desk. Tailgating is prohibited.
+Visitor badges must be visible at all times.
+
+Remote Work:
+Use only company-approved VPN when accessing internal systems remotely.
+Do not use public Wi-Fi without VPN. Report lost or stolen devices immediately.

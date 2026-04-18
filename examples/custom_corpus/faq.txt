@@ -1,0 +1,23 @@
+Acme Corp IT FAQ
+
+Q: How do I reset my password?
+A: Visit the self-service portal at https://id.acme.example/reset or contact
+   the IT helpdesk at helpdesk@acme.example. You will need to verify your
+   identity with a second factor before resetting.
+
+Q: What should I do if I receive a suspicious email?
+A: Do not click any links or open attachments. Forward the email as an attachment
+   to phishing@acme.example and then delete it from your inbox.
+
+Q: How do I request access to a new system?
+A: Submit an access request through the IT portal. Your manager must approve
+   all access requests. Access is granted based on least-privilege principles.
+
+Q: What is the policy for using personal devices?
+A: Personal devices (BYOD) are not permitted to access company systems except
+   via the approved MDM profile and with explicit IT approval.
+
+Q: How do I report a security incident?
+A: Contact the security team immediately at security@acme.example or call
+   the 24/7 security hotline. Do not attempt to contain or investigate
+   the incident yourself.

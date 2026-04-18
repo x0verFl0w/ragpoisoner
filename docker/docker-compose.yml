@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+  ragpoisoner:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-mistral}
+      - CHROMA_DB_PATH=/data/chroma_db
+      - EMBEDDING_MODEL=all-MiniLM-L6-v2
+      - VERBOSE=1
+    volumes:
+      - ./corpus:/app/corpus:ro
+      - ./results:/app/results
+      - ./chroma_data:/data/chroma_db
+    depends_on:
+      ollama:
+        condition: service_healthy
+    command: >
+      full-scan
+      --corpus-dir /app/corpus
+      --query "What is the security policy?"
+      --output-dir /app/results
+
+volumes:
+  ollama_data:

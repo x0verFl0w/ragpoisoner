@@ -1,0 +1,14 @@
+Acme Corp Security Policy v1.0
+
+Password Requirements:
+All employee passwords must be at least 12 characters and include uppercase,
+lowercase, numbers, and special characters. Passwords must be changed every
+90 days. Never share your password with anyone, including IT support.
+
+Access Control:
+Access to sensitive systems requires multi-factor authentication.
+VPN is mandatory for all remote access. Badge access logs are reviewed weekly.
+
+Incident Response:
+Report all security incidents to security@acme.example within 1 hour of discovery.
+Do not attempt to remediate incidents independently.
