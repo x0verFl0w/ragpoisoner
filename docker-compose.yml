@@ -17,7 +17,7 @@ services:
   ragpoisoner:
     image: ragpoisoner:latest
     build:
-      context: ..
+      context: .
       dockerfile: docker/Dockerfile
     environment:
       - OLLAMA_HOST=http://ollama:11434
@@ -26,9 +26,9 @@ services:
       - EMBEDDING_MODEL=all-MiniLM-L6-v2
       - VERBOSE=1
     volumes:
-      - ./corpus:/app/corpus:ro
-      - ./results:/app/results
-      - ./chroma_data:/data/chroma_db
+      - ./docker/corpus:/app/corpus:ro
+      - ./docker/results:/app/results
+      - ./docker/chroma_data:/data/chroma_db
     depends_on:
       ollama:
         condition: service_healthy

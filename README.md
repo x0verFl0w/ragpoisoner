@@ -66,7 +66,7 @@ cp /your/documents/*.txt docker/corpus/
 ### 3. Run a full scan
 
 ```bash
-docker compose -f docker/docker-compose.yml up --build
+docker compose up --build
 ```
 
 This will:
@@ -78,7 +78,7 @@ This will:
 ### 4. Change the target query
 
 ```bash
-OLLAMA_MODEL=mistral docker compose -f docker/docker-compose.yml run ragpoisoner \
+docker compose run ragpoisoner \
   full-scan \
   --corpus-dir /app/corpus \
   --query "What is the VPN access policy?" \
